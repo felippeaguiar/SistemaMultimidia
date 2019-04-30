@@ -1,0 +1,101 @@
+/* .container{
+  \\width: 75%;
+  \\justify-content: center;
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: 10%;
+  \\grid-template-columns: 25% 100px auto;
+  \\grid-template-columns: 50px 1fr 2fr;
+  grid-gap: 1px;
+
+} */
+.container{
+  grid-template-areas:
+  'title title title title title title'
+  'header header header header header header'
+  'menu main main main main main'
+  'bottom bottom bottom bottom bottom bottom ';
+  height: 2000px;
+  font-size: 2rem;
+  \\text-align: center;
+  display: grid;
+  grid-template-columns: 8% 92%;
+  grid-template-rows: 6% 3% 88% 3%;
+  background: orange;
+  \\grid-gap: 1px;
+  \\border: 2px solid black;
+}
+.title{
+  grid-area: title;
+  text-align: center;
+  transition: 2s;
+}
+h5{
+  text-shadow: 2px 2px gray;
+  text-align: center;
+}
+ul{
+  padding: 0px;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+li{
+  overflow: hidden;
+  padding: 5px;
+  display: block;
+}
+p{
+  margin-top: 4px;
+  margin-left: 5px;
+}
+@media (max-width: 600px) {
+  #video{
+    display: none;
+  }
+  #audio{
+    display: flex;
+  }
+}
+@media (min-width: 601px) {
+  #audio{
+    display: none;
+  }
+  #video{
+    display: flex;
+  }
+}
+.um{
+  grid-area: header;
+  text-align: center;
+  overflow: hidden;
+}
+.dois{
+  font-size: 16pt;
+  grid-area: menu;
+}
+.tres{
+  overflow: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  grid-area: main;
+}
+.quatro{
+  text-align: center;
+  overflow: hidden;
+  grid-area: bottom;
+  }
+div{
+  border: 2px solid black;
+}
+
+div:hover.caixa{
+  background-color: #99ff99;
+  transition-duration: 0.3s;
+
+}
+div:hover.title{
+  background: red;
+  \\color: black;
+  \\transition-duration: 3s;
+
+}
